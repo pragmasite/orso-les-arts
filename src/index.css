@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+Luxury/Professional color scheme for Cutlery & Silverware business
+*/
+
+@layer base {
+  :root {
+    /* Navy/Gold luxury palette */
+    --background: 240 100% 99%;
+    --foreground: 220 30% 15%;
+
+    --card: 240 100% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 240 100% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 220 30% 20%;
+    --primary-foreground: 240 100% 99%;
+
+    --secondary: 45 90% 50%;
+    --secondary-foreground: 220 30% 15%;
+
+    --muted: 220 20% 88%;
+    --muted-foreground: 220 15% 50%;
+
+    --accent: 45 90% 50%;
+    --accent-foreground: 220 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 240 100% 99%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 45 90% 50%;
+
+    --radius: 0.75rem;
+
+    --shadow-soft: 0 4px 20px -4px hsl(220 30% 20% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(220 30% 20% / 0.15);
+
+    --sidebar-background: 240 100% 99%;
+    --sidebar-foreground: 220 30% 15%;
+    --sidebar-primary: 220 30% 20%;
+    --sidebar-primary-foreground: 240 100% 99%;
+    --sidebar-accent: 45 90% 50%;
+    --sidebar-accent-foreground: 220 30% 15%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 45 90% 50%;
+  }
+
+  .dark {
+    --background: 220 30% 10%;
+    --foreground: 240 100% 99%;
+
+    --card: 220 25% 15%;
+    --card-foreground: 240 100% 99%;
+
+    --popover: 220 25% 15%;
+    --popover-foreground: 240 100% 99%;
+
+    --primary: 240 100% 99%;
+    --primary-foreground: 220 30% 20%;
+
+    --secondary: 45 90% 50%;
+    --secondary-foreground: 220 30% 15%;
+
+    --muted: 220 20% 30%;
+    --muted-foreground: 220 15% 70%;
+
+    --accent: 45 90% 50%;
+    --accent-foreground: 220 30% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 240 100% 99%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 45 90% 50%;
+    --sidebar-background: 220 30% 10%;
+    --sidebar-foreground: 240 100% 99%;
+    --sidebar-primary: 240 100% 99%;
+    --sidebar-primary-foreground: 220 30% 20%;
+    --sidebar-accent: 45 90% 50%;
+    --sidebar-accent-foreground: 220 30% 15%;
+    --sidebar-border: 220 20% 25%;
+    --sidebar-ring: 45 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
